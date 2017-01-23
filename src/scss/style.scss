@@ -1,0 +1,26 @@
+@import "colors";
+
+#header {
+    .logo {
+        width: 60px;
+        margin: 2px 20px;
+    }
+
+
+        background-color: $principal;
+
+}
+
+#prelogin {
+    height: 85vh;
+
+    a {
+        top: 40vh;
+    }
+}
+
+#footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}

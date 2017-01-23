@@ -10,9 +10,7 @@
                     this.add = () => {
                         usersService.add(this.newUser).then((res) => {
                             authService.connect(res.data).then(() => {
-                                $state.go('app.home').then(() => {
-                                    $state.reload()
-                                })
+                                $state.go('app.dashboard', {reload: true})
                             })
                         })
                     }
