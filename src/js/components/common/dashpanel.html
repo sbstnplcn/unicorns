@@ -3,14 +3,45 @@
         <div class="center">
             <img ng-src="{{$ctrl.user.avatar}}" class="circle responsive-img avatar">
         </div>
-        <div class="col s12 white-text center-align">
+        <div class="col s12 white-text center-align" ng-if="!$ctrl.editMode">
             <h5><em>{{$ctrl.user.firstname}} {{$ctrl.user.surname}}</em></h5>
+
         </div>
-        <div class="col s12 white-text dashmenu">
-            <p ui-sref="app.message">Messages</p>
+        <p ng-if="$ctrl.editMode" class="white-text">
+            Firstname :
+            <input type="text" ng-model="$ctrl.user.firstname">
+            Surname :
+            <input type="text" ng-model="$ctrl.user.surname">
+        </p>
+        <div class="col s12 white-text dashmenu" ng-if="!$ctrl.editMode">
+            <!-- <p ui-sref="app.message">Messages</p> -->
             <p ui-sref="app.myunicorns">Mes Licornes</p>
             <p ui-sref="app.profil">Mon Profil</p>
             <p ng-click="$ctrl.disconnect()">Déconnexion</p>
         </div>
+        <div class="row">
+            <div class="col s12">
+                <a class="waves-effect waves-light btn btnedit" ng-click="$ctrl.edit($ctrl.user)">
+                    {{!$ctrl.editMode ? 'Edit' : 'Validate' }}
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <a ng-if="$ctrl.editMode" class="waves-effect waves-light btn btnedit" ng-click="$ctrl.delete($ctrl.user)">
+                    Delete
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <a ng-if="$ctrl.editMode" class="waves-effect waves-light btn btnedit" ng-click="$ctrl.cancel($ctrl.user)">
+                    Cancel
+                </a>
+            </div>
+        </div>
     </div>
 </div>
+<section ng-if="$ctrl.editMode">
+
+</section>

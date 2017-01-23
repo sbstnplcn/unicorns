@@ -26,12 +26,16 @@
                                 Gender : {{$ctrl.unicorn.sex}}
                             </p>
                             <!-- Gender : EditMode -->
-                            <div class="" ng-if="$ctrl.editMode">
+                            <div class="input-field" ng-if="$ctrl.editMode">
                                 Gender :
-                                <select class="" name="" ng-model="$ctrl.unicorn.sex">
-                                    <option ng-value="male">Male</option>
-                                    <option ng-value="female">Female</option>
-                                </select>
+                                <form action="#">
+                                    <p>
+                                        <input name="sex" type="radio" ng-model="$ctrl.unicorn.sex" value="male" id="male" />
+                                        <label for="male">Male</label>
+                                        <input name="sex" type="radio" ng-model="$ctrl.unicorn.sex" value="female" id="female" />
+                                        <label for="female">Female</label>
+                                    </p>
+                                </form>
                             </div>
 
                             <br>
