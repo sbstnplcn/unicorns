@@ -4,8 +4,36 @@
         <dashpanel></dashpanel>
         <!-- Left Part -->
         <div class="col s9">
-          {{$ctrl.user}}
-          {{$ctrl.unicorns}}
+            <div class="col s12">
+                <div class="col s4 right">
+                    <select ng-model="$ctrl.filterby">
+                        <option ng-value="'name'">Name</option>
+                        <option ng-value="'age'">Age</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col l6" ng-repeat="unicorn in $ctrl.unicorns | orderBy : $ctrl.filterby track by $index">
+                <div class="card-panel grey lighten-5 z-depth-1 hoverable">
+                    <div class="row valign-wrapper">
+                        <div class="col s4">
+                            <div class="imgunicorn" style="background-image:url({{unicorn.picture}})"></div>
+                        </div>
+                        <div class="col s8">
+                            <a ui-sref="app.unicorn({unicornId : unicorn._id})">
+                                <span class="unicornname">
+                                  {{unicorn.name}} ({{unicorn.age}}ans)
+                                </span>
+                            </a>
+                            <p>
+                                {{unicorn.description | limitTo: 100}}{{unicorn.description.length > 100 ? '...' : '' }}
+                            </p>
+                            <div class="col s2 m5 unicornowner right">
+                                <img ng-src="{{unicorn.owner.avatar}}" alt="" class="circle responsive-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
