@@ -4,19 +4,9 @@
   "description": "Examen de la WildCodeSchool de la promotion de Bordeaux de septembre 2016.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sbstnplcn/bordeaux-0916-examen-final.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sbstnplcn/bordeaux-0916-examen-final/issues"
-  },
-  "homepage": "https://github.com/sbstnplcn/bordeaux-0916-examen-final#readme",
   "dependencies": {
     "angular": "^1.6.1",
     "angular-ui-router": "^0.4.2",
