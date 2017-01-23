@@ -22,11 +22,13 @@
     "css-brunch": "^2.6.1",
     "express": "^4.14.0",
     "javascript-brunch": "^2.0.0",
+    "materialize-css": "^0.97.8",
     "method-override": "^2.3.7",
     "mongodb": "^2.2.21",
     "mongoose": "^4.7.7",
     "morgan": "^1.7.0",
     "nodemon": "^1.11.0",
+    "sass-brunch": "^2.9.0",
     "uglify-js-brunch": "^2.0.1"
   }
 }

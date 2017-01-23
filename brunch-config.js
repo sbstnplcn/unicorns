@@ -43,7 +43,7 @@ exports.config = {
             "js": ['node_modules/angular/angular.min.js',
                 'node_modules/angular-ui-router/release/angular-ui-router.min.js'
             ],
-            "css": "node_modules/bootstrap/dist/css/bootstrap.css",
+            fonts:"node_modules/materialize-css/dist/fonts",
             verbose: true,
             onlyChanged: true
         },

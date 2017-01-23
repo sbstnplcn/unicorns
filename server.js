@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
 const routes = require('./app/routes')
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 9000
 const cors = require('cors')
 
 app.use(express.static(__dirname + '/public'))
