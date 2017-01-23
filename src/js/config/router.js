@@ -8,12 +8,16 @@
             template: '<header></header><ui-view></ui-view><footer></footer>'
         })
         .state('app.dashboard', {
-            url: '/dashboard',
+            url: '/',
             template: '<dashboard></dashboard>'
         })
         .state('app.unicorn', {
           url:'/unicorn/{unicornId}',
           template:'<unicorn></unicorn>'
+        })
+        .state('app.myunicorns', {
+          url:'/myunicorns',
+          template:'<myunicorns></myunicorns>'
         })
         .state('app.prelogin', {
             url: '/prelogin',

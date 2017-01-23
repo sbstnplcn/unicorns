@@ -11,5 +11,6 @@
     'app.prelogin',
     'app.services',
     'app.dashboard',
-    'app.unicorn'
+    'app.unicorn',
+    'app.myunicorns'
 ]))
