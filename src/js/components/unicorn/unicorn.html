@@ -1,7 +1,22 @@
 <section id="dashboard">
     <div class="row">
         <!-- Right Menu -->
-        <dashpanel></dashpanel>
+        <div class="col s3 account">
+            <div class="row">
+                <div class="center">
+                    <img ng-src="{{$ctrl.user.avatar}}" class="circle responsive-img avatar">
+                </div>
+                <div class="col s12 white-text center-align">
+                    <h5><em>{{$ctrl.user.firstname}} {{$ctrl.user.surname}}</em></h5>
+                </div>
+                <div class="col s12 white-text dashmenu">
+                    <p ui-sref="app.message">Messages</p>
+                    <p ui-sref="app.licorn">Mes Licornes</p>
+                    <p ui-sref="app.profil">Mon Profil</p>
+                    <p ng-click="$ctrl.disconnect()">Déconnexion</p>
+                </div>
+            </div>
+        </div>
         <!-- Left Part -->
         <div class="col s9">
             <div class="col l6" ng-repeat="unicorn in $ctrl.unicorns">

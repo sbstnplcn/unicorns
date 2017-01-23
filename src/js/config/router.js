@@ -11,6 +11,10 @@
             url: '/dashboard',
             template: '<dashboard></dashboard>'
         })
+        .state('app.unicorn', {
+          url:'/unicorn/{unicornId}',
+          template:'<unicorn/>'
+        })
         .state('app.prelogin', {
             url: '/prelogin',
             template: '<prelogin></prelogin>'

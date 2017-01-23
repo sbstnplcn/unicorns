@@ -1,6 +1,6 @@
 ((app) => {
-    app.component('dashboard', {
-        templateUrl: 'js/components/dashboard/dashboard.html',
+    app.component('unicorn', {
+        templateUrl: 'js/components/unicorn/unicorn.html',
         controller: ['usersService', '$state', 'authService', 'unicornService',
             function(usersService, $state, authService, unicornService) {
                 angular.extend(this, {
@@ -36,4 +36,4 @@
             }
         ]
     })
-})(angular.module('app.dashboard'))
+})(angular.module('app.unicorn'))

@@ -10,5 +10,6 @@
     'app.register',
     'app.prelogin',
     'app.services',
-    'app.dashboard'
+    'app.dashboard',
+    'app.unicorn'
 ]))
