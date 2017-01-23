@@ -19,6 +19,9 @@ npm i
 
 npm run dev
 ```
+Connect to
+email : s.s@s.s
+password : s
 
 
 
