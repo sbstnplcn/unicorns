@@ -18,14 +18,16 @@
 
 #footer {
     bottom: 0;
-    position: absolute;
     width: 100%;
 }
 
 #dashboard {
     .account {
-        height: 90vh;
+        height: 100vh;
         background-color: $textimportant;
+        position: fixed;
+        z-index: -1;
+        right: 0;
     }
 
     .avatar {
@@ -40,5 +42,11 @@
         p {
             cursor: pointer;
         }
+    }
+
+    .unicornname {
+        color: $textimportant;
+        font-size: 18px;
+        font-weight: 300;
     }
 }

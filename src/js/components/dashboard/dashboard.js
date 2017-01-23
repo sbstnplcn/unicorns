@@ -16,6 +16,12 @@
 
                         unicornService.get().then((res) => {
                             this.unicorns = res.data
+                            this.unicorns.forEach((el, idx, arr) => {
+                                console.log(new Date());
+                                console.log(new Date(el.birth));
+                                return el.age = (Date() - new Date(el.birth))
+                            })
+                            console.log(this.unicorns);
                         })
 
 

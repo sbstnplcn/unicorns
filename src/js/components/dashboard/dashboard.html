@@ -1,7 +1,7 @@
 <section id="dashboard">
   <div class="row">
     <!-- Right Menu -->
-    <div class="col s4 right account">
+    <div class="col s3 account">
       <div class="row">
         <div class="center">
             <img ng-src="{{$ctrl.user.avatar}}" class="circle responsive-img avatar">
@@ -18,5 +18,24 @@
       </div>
     </div>
     <!-- Left Part -->
+    <div class="col s9">
+      <div class="col l6" ng-repeat="unicorn in $ctrl.unicorns">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img ng-src="{{unicorn.picture}}" alt="" class="responsive-img">
+            </div>
+            <div class="col s8">
+              <span class="unicornname">
+                {{unicorn.name}}({{unicorn.age | date}}ans)
+              </span>
+            </div>
+            <div class="col s2">
+              <img ng-src="{{unicorn.owner.avatar}}" alt="" class="circle responsive-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
