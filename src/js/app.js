@@ -12,5 +12,6 @@
     'app.services',
     'app.dashboard',
     'app.unicorn',
-    'app.myunicorns'
+    'app.myunicorns',
+    'app.addunicorn'
 ]))

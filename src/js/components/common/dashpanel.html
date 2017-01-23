@@ -28,6 +28,13 @@
         </div>
         <div class="row">
             <div class="col s12">
+                <a ng-if="!$ctrl.editMode" class="waves-effect waves-light btn btnedit" ui-sref="app.addunicorn">
+                    Add Unicorn
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
                 <a ng-if="$ctrl.editMode" class="waves-effect waves-light btn btnedit" ng-click="$ctrl.delete($ctrl.user)">
                     Delete
                 </a>

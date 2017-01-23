@@ -9,8 +9,8 @@
             getById(id) {
                 return $http.get('/api/unicorn/' + id)
             },
-            add(newUser) {
-                return $http.post('/api/unicorn', newUser)
+            add(newUnicorn) {
+                return $http.post('/api/unicorn', newUnicorn)
             },
             edit(unicorn) {
                 return $http.put('/api/unicorn/' + unicorn._id, unicorn)

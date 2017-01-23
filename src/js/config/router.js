@@ -15,6 +15,10 @@
           url:'/unicorn/{unicornId}',
           template:'<unicorn></unicorn>'
         })
+        .state('app.addunicorn', {
+          url:'/addunicorn',
+          template:'<addunicorn></addunicorn>'
+        })
         .state('app.myunicorns', {
           url:'/myunicorns',
           template:'<myunicorns></myunicorns>'

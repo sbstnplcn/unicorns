@@ -1,0 +1,50 @@
+<section id="unicorn">
+    <div class="row">
+        <!-- Right Menu -->
+        <dashpanel id="panel"></dashpanel>
+        <!-- Left Part -->
+        <div class="col s9">
+            <h3>Unicorn Infos</h3>
+            <div class="col l12">
+                <div class="card-panel grey lighten-5 z-depth-1 hoverable">
+                    <div class="row valign-wrapper">
+                        <div class="col s4">
+                            <div class="imgunicorn" style="background-image:url({{$ctrl.unicorn.picture}})"></div>
+                        </div>
+                        <div class="col s8">
+                            <!-- Name/Age -->
+                            <span class="unicornname">
+                                <input type="text" ng-model="$ctrl.unicorn.name">
+                            </span>
+                            <input type="date" ng-model="$ctrl.unicorn.birth" class="datepicker">
+                            <!-- Gender -->
+                            <div class="input-field">
+                                Gender :
+                                <form action="#">
+                                    <p>
+                                        <input name="sex" type="radio" ng-model="$ctrl.unicorn.sex" value="male" id="male" />
+                                        <label for="male">Male</label>
+                                        <input name="sex" type="radio" ng-model="$ctrl.unicorn.sex" value="female" id="female" />
+                                        <label for="female">Female</label>
+                                    </p>
+                                </form>
+                            </div>
+                            <br>
+                            <!-- Description -->
+                            <div class="input-field col s12">
+                                <textarea class="materialize-textarea" rows="8" cols="80" ng-model="$ctrl.unicorn.description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <button class="btn btn-info btnedit" ng-click="$ctrl.add($ctrl.unicorn)">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
