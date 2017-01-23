@@ -1,5 +1,6 @@
-((app)=>{
+((app) => {
 
 })(angular.module('app', [
-    'ui.router'
+    'ui.router',
+    'app.views'
 ]))
