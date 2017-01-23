@@ -5,10 +5,7 @@
         width: 60px;
         margin: 2px 20px;
     }
-
-
-        background-color: $principal;
-
+    background-color: $principal;
 }
 
 #prelogin {
@@ -23,4 +20,25 @@
     bottom: 0;
     position: absolute;
     width: 100%;
+}
+
+#dashboard {
+    .account {
+        height: 90vh;
+        background-color: $textimportant;
+    }
+
+    .avatar {
+        width: 100px;
+        margin-top: 3em;
+    }
+
+    .dashmenu {
+        font-size: 18px;
+        font-weight: 200;
+
+        p {
+            cursor: pointer;
+        }
+    }
 }

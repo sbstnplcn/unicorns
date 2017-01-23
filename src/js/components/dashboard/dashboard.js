@@ -1,18 +1,34 @@
 ((app) => {
     app.component('dashboard', {
         templateUrl: 'js/components/dashboard/dashboard.html',
-        controller: ['usersService', '$state', function(usersService, $state) {
-            angular.extend(this, {
-                $onInit() {
+        controller: ['usersService', '$state', 'authService', 'unicornService',
+            function(usersService, $state, authService, unicornService) {
+                angular.extend(this, {
+                    $onInit() {
 
-                    let user = usersService.getCurrent().then((res) => {
-                        user = res.data
-                    }).catch(()=>{
-                        $state.go('app.prelogin', {reload: true})
-                    })
+                        usersService.getCurrent().then((res) => {
+                            this.user = res.data
+                        }).catch(() => {
+                            $state.go('app.prelogin', {
+                                reload: true
+                            })
+                        })
 
-                }
-            })
-        }]
+                        unicornService.get().then((res) => {
+                            this.unicorns = res.data
+                        })
+
+
+                    },
+                    disconnect() {
+                        authService.disconnect().then(() => {
+                            $state.go('app.prelogin', {
+                                reload: true
+                            })
+                        })
+                    }
+                })
+            }
+        ]
     })
 })(angular.module('app.dashboard'))
