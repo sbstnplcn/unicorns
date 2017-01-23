@@ -13,7 +13,7 @@
         })
         .state('app.unicorn', {
           url:'/unicorn/{unicornId}',
-          template:'<unicorn/>'
+          template:'<unicorn></unicorn>'
         })
         .state('app.prelogin', {
             url: '/prelogin',

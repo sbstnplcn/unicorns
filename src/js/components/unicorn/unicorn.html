@@ -1,44 +1,50 @@
-<section id="dashboard">
+<section id="unicorn">
     <div class="row">
         <!-- Right Menu -->
-        <div class="col s3 account">
-            <div class="row">
-                <div class="center">
-                    <img ng-src="{{$ctrl.user.avatar}}" class="circle responsive-img avatar">
-                </div>
-                <div class="col s12 white-text center-align">
-                    <h5><em>{{$ctrl.user.firstname}} {{$ctrl.user.surname}}</em></h5>
-                </div>
-                <div class="col s12 white-text dashmenu">
-                    <p ui-sref="app.message">Messages</p>
-                    <p ui-sref="app.licorn">Mes Licornes</p>
-                    <p ui-sref="app.profil">Mon Profil</p>
-                    <p ng-click="$ctrl.disconnect()">Déconnexion</p>
-                </div>
-            </div>
-        </div>
+        <dashpanel id="panel"></dashpanel>
         <!-- Left Part -->
         <div class="col s9">
-            <div class="col l6" ng-repeat="unicorn in $ctrl.unicorns">
+            <div class="col l12">
                 <div class="card-panel grey lighten-5 z-depth-1 hoverable">
                     <div class="row valign-wrapper">
                         <div class="col s4">
-                            <div class="imgunicorn" style="background-image:url({{unicorn.picture}})"></div>
+                            <div class="imgunicorn" style="background-image:url({{$ctrl.unicorn.picture}})"></div>
                         </div>
                         <div class="col s8">
-                            <a ui-sref="app.unicorn({unicornId : unicorn._id})">
-                                <span class="unicornname">
-                                  {{unicorn.name}} ({{unicorn.age}}ans)
-                                </span>
-                            </a>
-                            <p>
-                                {{unicorn.description | limitTo: 100}}{{unicorn.description.length > 100 ? '...' : '' }}
+                            <span class="unicornname" ng-if="!$ctrl.editMode">
+                              {{$ctrl.unicorn.name}} ({{$ctrl.unicorn.age}}ans)
+                            </span>
+                            <span class="unicornname" ng-if="$ctrl.editMode">
+                                <input type="text" ng-model="$ctrl.unicorn.name">
+                            </span>
+                            <p ng-if="!$ctrl.editMode">
+                                Gender : {{$ctrl.unicorn.sex}}
                             </p>
+                            <br>
+                            <p ng-if="!$ctrl.editMode">
+                                {{$ctrl.unicorn.description}}
+                            </p>
+                            <div class="input-field col s12" ng-if="$ctrl.editMode">
+                                <textarea class="materialize-textarea" rows="8" cols="80" ng-model="$ctrl.unicorn.description"></textarea>
+                            </div>
                         </div>
                     </div>
                     <div class="row right">
                         <div class="col s2">
-                            <img ng-src="{{unicorn.owner.avatar}}" alt="" class="circle responsive-img">
+                            <img ng-src="{{$ctrl.unicorn.owner.avatar}}" alt="" class="circle responsive-img">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <button class="btn btn-info btnedit" ng-click="$ctrl.edit($ctrl.unicorn)">
+                                {{!$ctrl.editMode ? 'Edit' : 'Validate' }}
+                            </button>
+                            <button ng-if="$ctrl.editMode" class="btn btn-info btnedit" ng-click="$ctrl.delete($ctrl.unicorn)">
+                                Delete
+                            </button>
+                            <button ng-if="$ctrl.editMode" class="btn btn-info btnedit" ng-click="$ctrl.cancel($ctrl.unicorn)">
+                                Cancel
+                            </button>
                         </div>
                     </div>
                 </div>

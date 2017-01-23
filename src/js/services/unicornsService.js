@@ -6,13 +6,8 @@
             get() {
                 return $http.get('/api/unicorn')
             },
-            getById(unicorn) {
-                return $http.get('/api/unicorn/' + unicorn._id)
-            },
-            getCurrent(){
-              return authService.getCurrent().then((current)=>{
-                  return $http.get('/api/unicorn/' + current._id)
-              })
+            getById(id) {
+                return $http.get('/api/unicorn/' + id)
             },
             add(newUser) {
                 return $http.post('/api/unicorn', newUser)

@@ -21,7 +21,8 @@
     width: 100%;
 }
 
-#dashboard {
+#dashboard,
+#panel {
     .account {
         height: 100vh;
         background-color: $textimportant;
@@ -56,5 +57,20 @@
         background-repeat: no-repeat;
         height: 10em;
         width: 100%;
+    }
+}
+
+#unicorn {
+    .imgunicorn {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 20em;
+        width: 100%;
+    }
+
+    .btnedit {
+        background-color: $btnsecondaire;
+        color: white;
     }
 }
