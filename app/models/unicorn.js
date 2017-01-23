@@ -17,10 +17,10 @@ let unicornModel = mongoose.model('Unicorn', new mongoose.Schema({
     picture: {
         type: String
     },
-    owner: {
+    owner: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'user'
-    }
+        ref: 'User'
+    }]
 }, {
     timestamps: true
 }))
