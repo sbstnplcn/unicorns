@@ -1,0 +1,30 @@
+<!-- Login -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <a ui-sref="app.prelogin">
+                    <button class="btn btn-info">Back</button>
+                </a>
+            </div>
+        </div>
+        <form name="login">
+            <div class="row center-align">
+                <h3>Login</h3>
+                <div class="input-field col s8 offset-s2">
+                    <input type="text" ng-model="$ctrl.user.email" required>
+                    <label for="Email">Email</label>
+                </div>
+                <div class="input-field col s8 offset-s2">
+                    <input type="text" ng-model="$ctrl.user.password" required>
+                    <label for="Password">Password</label>
+                </div>
+                <div class="col s12">
+                    <button class="btn btn-info white" ng-disabled="login.$invalid">
+                        <a ng-click="$ctrl.connect($ctrl.user)">Connexion</a>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

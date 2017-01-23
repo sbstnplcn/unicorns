@@ -14,6 +14,9 @@ let userModel = mongoose.model('User', new mongoose.Schema({
     },
     avatar: {
         type: String
+    },
+    password: {
+        type: String
     }
 }, {
     timestamps: true

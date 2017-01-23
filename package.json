@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "angular": "^1.6.1",
+    "angular-cookies": "^1.6.1",
     "angular-ui-router": "^0.4.2",
     "angularjs-templates-brunch": "^1.0.0",
     "auto-reload-brunch": "^2.7.1",
@@ -21,7 +22,9 @@
     "cors": "^2.8.1",
     "css-brunch": "^2.6.1",
     "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
     "javascript-brunch": "^2.0.0",
+    "jsonwebtoken": "^7.2.1",
     "materialize-css": "^0.97.8",
     "method-override": "^2.3.7",
     "mongodb": "^2.2.21",
