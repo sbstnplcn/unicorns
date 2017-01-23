@@ -14,15 +14,29 @@
 </head>
 
 <body>
-    
+
     <ui-view></ui-view>
 
 </body>
 
+<script src="libs/jquery.min.js"></script>
+<script src="libs/materialize.min.js"></script>
 <script src="js/angular.min.js"></script>
 <script src="js/angular-ui-router.min.js"></script>
 <script src="js/angular-cookies.min.js"></script>
 <script src="js/templates.js"></script>
 <script src="js/app.min.js"></script>
+
+
+<!-- Materialize init params -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 10 // Creates a dropdown of 15 years to control year
+    });
+</script>
 
 </html>

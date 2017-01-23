@@ -23,14 +23,8 @@
                             })
                         })
 
+                        this.filterby = 'name'
 
-                    },
-                    disconnect() {
-                        authService.disconnect().then(() => {
-                            $state.go('app.prelogin', {
-                                reload: true
-                            })
-                        })
                     }
                 })
             }

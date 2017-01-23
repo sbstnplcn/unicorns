@@ -17,8 +17,8 @@
                         unicornService.getById($stateParams.unicornId).then((res) => {
                             this.unicorn = res.data
                             let a = new Date
-                            let b = new Date(this.unicorn.birth)
-                            this.unicorn.age = (a.getFullYear() - b.getFullYear())
+                            this.unicorn.birth = new Date(this.unicorn.birth)
+                            this.unicorn.age = (a.getFullYear() - this.unicorn.birth.getFullYear())
                         })
 
 

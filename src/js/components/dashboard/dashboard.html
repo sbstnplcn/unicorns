@@ -4,7 +4,13 @@
         <dashpanel></dashpanel>
         <!-- Left Part -->
         <div class="col s9">
-            <div class="col l6" ng-repeat="unicorn in $ctrl.unicorns">
+            <div class="col s12 right">
+                <select ng-model="$ctrl.filterby">
+                    <option ng-value="'name'">Name</option>
+                    <option ng-value="'age'">Age</option>
+                </select>
+            </div>
+            <div class="col l6" ng-repeat="unicorn in $ctrl.unicorns | orderBy : $ctrl.filterby track by $index">
                 <div class="card-panel grey lighten-5 z-depth-1 hoverable">
                     <div class="row valign-wrapper">
                         <div class="col s4">

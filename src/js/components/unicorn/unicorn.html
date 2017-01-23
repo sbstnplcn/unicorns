@@ -4,6 +4,7 @@
         <dashpanel id="panel"></dashpanel>
         <!-- Left Part -->
         <div class="col s9">
+            <h2>Unicorn Infos</h2>
             <div class="col l12">
                 <div class="card-panel grey lighten-5 z-depth-1 hoverable">
                     <div class="row valign-wrapper">
@@ -11,19 +12,34 @@
                             <div class="imgunicorn" style="background-image:url({{$ctrl.unicorn.picture}})"></div>
                         </div>
                         <div class="col s8">
+                            <!-- Name / Age -->
                             <span class="unicornname" ng-if="!$ctrl.editMode">
                               {{$ctrl.unicorn.name}} ({{$ctrl.unicorn.age}}ans)
                             </span>
+                            <!-- Name/Age : EditMode -->
                             <span class="unicornname" ng-if="$ctrl.editMode">
                                 <input type="text" ng-model="$ctrl.unicorn.name">
                             </span>
+                            <input ng-if="$ctrl.editMode" type="date" ng-model="$ctrl.unicorn.birth" class="datepicker">
+                            <!-- Gender -->
                             <p ng-if="!$ctrl.editMode">
                                 Gender : {{$ctrl.unicorn.sex}}
                             </p>
+                            <!-- Gender : EditMode -->
+                            <div class="" ng-if="$ctrl.editMode">
+                                Gender :
+                                <select class="" name="" ng-model="$ctrl.unicorn.sex">
+                                    <option ng-value="male">Male</option>
+                                    <option ng-value="female">Female</option>
+                                </select>
+                            </div>
+
                             <br>
+                            <!-- Description -->
                             <p ng-if="!$ctrl.editMode">
                                 {{$ctrl.unicorn.description}}
                             </p>
+                            <!-- Description : EditMode -->
                             <div class="input-field col s12" ng-if="$ctrl.editMode">
                                 <textarea class="materialize-textarea" rows="8" cols="80" ng-model="$ctrl.unicorn.description"></textarea>
                             </div>
