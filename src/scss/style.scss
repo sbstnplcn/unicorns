@@ -15,15 +15,27 @@
     }
 
     .colored {
-        color:$textimportant;
+        color: $textimportant;
     }
 }
 
 #prelogin {
     height: 85vh;
+    background-image: url('../img/bg.png');
 
     a {
         top: 40vh;
+    }
+}
+
+#login, #register {
+    background-image: url('../img/bg.png');
+    height: 85vh;
+
+    .container {
+        background-color: white;
+        padding: 30px;
+        opacity: 0.85;
     }
 }
 
@@ -68,7 +80,6 @@
         height: 10em;
         width: 100%;
     }
-
 }
 
 #unicorn {
@@ -85,6 +96,7 @@
         color: white;
     }
 }
+
 .btnedit {
     background-color: $btnsecondaire;
     color: white;

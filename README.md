@@ -4,6 +4,25 @@ Examen de la WildCodeSchool de la promotion de Bordeaux de septembre 2016.
 
 Pour débuter l'examen il faut **OBLIGATOIREMENT** forker le dépôt sur votre compte Github.
 
+
+##Install
+
+Need : Nodejs / MongoDB
+
+```
+git clone https://github.com/sbstnplcn/bordeaux-0916-examen-final.git
+cd bordeaux-0916-examen-final
+npm i
+
+-users : mongoimport --db unicorn --collection users --type=json ~/YOUR_PATH/bordeaux-0916-examen-final/users.json
+-pages : mongoexport --db unicorn --collection unicorns --type=json ~/YOUR_PATH/bordeaux-0916-examen-final/unicorns.json
+
+npm run dev
+```
+
+
+
+
 ### Application
 
 Une application Angular est a réaliser en respectant la maquette présente dans le dossier /maquette, cette application
@@ -18,7 +37,7 @@ La maquette ne contient pas tous les écrans, pour les autres écrans conserver 
 #### Objectifs / Critères :
 * Respecter la maquette
 * Respecter les couleurs (voir colors.html)
-<!-- * Utiliser un gestionnaire de dépendances -->
+* Utiliser un gestionnaire de dépendances
 * Un README clair permettant d'installer / utiliser l'application
 * Bonne utilisation de GIT (messages des commits clairs)
 * Pas de code inutilisés
@@ -34,5 +53,5 @@ La maquette ne contient pas tous les écrans, pour les autres écrans conserver 
 * Upload d'image
 * Authentification sur la plateforme d'un propriétaire
 * Réaliser un système de message entre les propriétaires
-<!-- * Mettre en place un tasker -->
+* Mettre en place un tasker
 * Mis en ligne
