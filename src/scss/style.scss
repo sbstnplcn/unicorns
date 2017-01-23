@@ -1,12 +1,22 @@
 @import "colors";
 
 #header {
+    background-color: $principal;
+    z-index: 1;
+
     .logo {
         width: 60px;
         margin: 2px 20px;
     }
-    background-color: $principal;
-    z-index: 1;
+
+    .logotitle {
+        padding: 5px;
+        position: absolute;
+    }
+
+    .colored {
+        color:$textimportant;
+    }
 }
 
 #prelogin {
@@ -58,6 +68,8 @@
         height: 10em;
         width: 100%;
     }
+
+    .unicornowner {}
 }
 
 #unicorn {

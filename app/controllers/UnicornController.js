@@ -9,8 +9,8 @@ class UnicornController extends Controller {
         super(UNICORN)
     }
 
-    findById(req,res, next){
-      this.model.findById(req.params.id).populate({
+    find(req,res, next){
+      this.model.find(req.params.id).populate({
         path: 'owner',
         populate:({path: 'user', populate:{ path: 'owner'}})
         }).exec((err, document)=>{

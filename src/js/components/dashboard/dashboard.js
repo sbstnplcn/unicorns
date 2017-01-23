@@ -16,6 +16,7 @@
 
                         unicornService.get().then((res) => {
                             this.unicorns = res.data
+                            console.log(this.unicorns);
                             this.unicorns.forEach((el) => {
                                 let a = new Date
                                 let b = new Date(el.birth)
